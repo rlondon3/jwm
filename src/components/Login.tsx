@@ -60,8 +60,7 @@ const Login = ({ handleLogin }: LoginProps) => {
 		script.src = 'https://accounts.google.com/gsi/client';
 		script.onload = () => {
 			window.google.accounts.id.initialize({
-				client_id:
-					'16793657163-olf2g6hn5u1dkvtsu86r9tm3tu46rmj8.apps.googleusercontent.com',
+				client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID,
 				callback: handleCredentialResponse,
 				itp_support: true,
 			});
